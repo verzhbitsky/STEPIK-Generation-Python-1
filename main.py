@@ -197,7 +197,6 @@
 #     print()
 
 
-
 # n = int(input())
 # for i in range(n + 1):
 #     for j in range(i):
@@ -278,7 +277,6 @@
 #     if i % 1 == 0 and i % i == 0:
 #         for j in range(1, i + 1):
 #             print(j)
-
 
 
 # city1 = str(input())
@@ -505,7 +503,6 @@
 # print(rev_s)
 
 
-
 # s = input()
 # if s[:] == s[::-1]:
 #     print("YES")
@@ -656,7 +653,6 @@
 #     print(chr(ord('A') + i))
 
 
-
 # a = int(input())
 # b = int(input())
 # s = ''
@@ -708,13 +704,11 @@
 # print(num)
 
 
-
 # num = int(input())
 # chars = list()
 # for i in range(97, 97 + num):
 #     chars += chr(i)
 # print(chars)
-
 
 
 # rainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
@@ -809,7 +803,6 @@
 #     n_list.append(n)
 # del n_list[1::2]
 # print(n_list)
-
 
 
 # num = int(input())
@@ -1000,8 +993,7 @@
 # sp = input()
 # print(sp.join(num_list))
 
-# num_list = list()
-# num_list.extend(input())
+# num_list = input().split()
 # count = 0
 # for i in range(len(num_list)):
 #     for j in range(i + 1, len(num_list)):
@@ -1017,5 +1009,830 @@
 #             print("YES")
 
 
+# Заменил второй элемент списка на 17;
+# Добавил числа 4, 5 и 6 в конец списка;
+# Удалил первый элемент списка;
+# Удвоил список;
+# Вставил число 25 по индексу 3;
+# Вывел список, с помощью функции print()
+
+# numbers = [8, 9, 10, 11]
+# numbers[1] = 17
+# numbers.extend([4, 5, 6])
+# del numbers[0]
+# numbers.extend(numbers)
+# numbers.insert(3, 25)
+# print(numbers)
 
 
+# s_list = input().split()
+# for i in range(len(s_list)):
+#     s_list[i] = int(s_list[i])
+# if len(s_list) > 1:
+#     s_max = max(s_list)
+#     s_min = min(s_list)
+#     index_s_max = s_list.index(s_max)
+#     index_s_min = s_list.index(s_min)
+#     s_list.remove(s_max)
+#     s_list.remove(s_min)
+#     if s_max > 99:
+#         s_list.insert(index_s_max - 1, s_min)
+#         s_list.insert(index_s_min, s_max)
+#     else:
+#         s_list.insert(index_s_max, s_min)
+#         s_list.insert(index_s_min, s_max)
+#     print(*s_list)
+# else:
+#     print(*s_list)
+
+
+# s_list = input().split()
+# n_list = list()
+# for i in range(len(s_list)):
+#     s_list[i] = int(s_list[i])
+# s_max = max(s_list)
+# s_min = min(s_list)
+# index_s_max = s_list.index(s_max)
+# index_s_min = s_list.index(s_min)
+# for i in range(len(s_list)):
+#     if s_list[i] == s_max:
+#         n_list.append(s_min)
+#     elif s_list[i] == s_min:
+#         n_list.append(s_max)
+#     else:
+#         n_list.append(s_list[i])
+# print(*n_list)
+
+
+# s = input().lower()
+# s_list = s.split()
+#
+# print(f"Общее количество артиклей: {s_list.count('a') + s_list.count('an') + s_list.count('the')}")
+
+# df = input()
+# num = ''
+# l_s = list()
+# for i in df:
+#     if i == '#':
+#         continue
+#     else:
+#         num += i
+# for i in range(int(num)):
+#     l_s.append(input())
+# for i in range(len(l_s)):
+#     if '#' in l_s[i]:
+#         ind = l_s[i].rfind('#')
+#         for j in range(ind, len(l_s[i])):
+#             del j
+
+# print(l_s)
+
+
+# df_s = input()
+# df_s = df_s.replace('#', '')
+# df_s = int(df_s.strip())
+# s = ''
+# for i in range(df_s):
+#     s += input() + '\n'
+# new_s = ""
+# s_list = list()
+# s_list.extend(s)
+# if '#' in s:
+#     ind = s_list.index('#')
+#     del s_list[ind - 1:len(s_list)]
+# new_s = ''.join(s_list)
+# print(new_s.rstrip())
+
+# num = input()
+# num = num.replace('#', '')
+# num = int(num.strip())
+# l_s = list()
+# new_s = ""
+# ind = 0
+# for i in range(num):
+#     s = input()
+#     if '#' in s:
+#         ind = s.index('#')
+#         new_s = s.replace(s[ind:len(s)], '')
+#     else:
+#         new_s = s
+#     l_s.append(new_s)
+# for i in l_s:
+#     print(i.rstrip())
+
+
+# s = input().split()
+# num = list()
+# for i in range(len(s)):
+#     num.append(int(s[i]))
+# num.sort()
+# print(*num)
+# num.sort(reverse=True)
+# print(*num)
+
+
+# keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break',
+#             'class', 'continue', 'def', 'del', 'elif', 'else', 'except',
+#             'finally', 'try', 'for', 'from', 'global', 'if', 'import', 'in',
+#             'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
+#
+# new_words = [m[1:len(m)] for m in keywords]
+# print(new_words)
+
+
+# keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class',
+#             'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'try', 'for',
+#             'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not',
+#             'or', 'pass', 'raise', 'return', 'while', 'yield']
+# lengths = [len(i) for i in keywords]
+# print(lengths)
+
+# keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class',
+#             'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'try', 'for',
+#             'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not',
+#             'or', 'pass', 'raise', 'return', 'while', 'yield']
+# lengths = [i for i in keywords if len(i) >= 5]
+# print(lengths)
+
+# palindromes = [i for i in range(100, 1000) if (i // 100) % 10 == i % 10]
+#
+# print(palindromes)
+
+
+# num = int(input())
+# num_list = [i ** 2 for i in range(1, num + 1)]
+# for i in num_list:
+#     print(i)
+
+# n = input().split()
+# n_list = [int(n[i]) ** 3 for i in range(len(n))]
+# print(*n_list)
+
+# # s = input().split()
+# n_s = [input() for _ in range(1): print(n_s)]
+# # print(*n_s)
+
+# n_s = list()
+# s = [input().split() for i in range(1)]
+# for i in range(len(s)):
+#     n_s.append(s[i])
+#     print(*n_s[i], sep='\n')
+
+
+# print(*(input().replace(' ', '\n') for i in range(1)))
+
+# s = input()
+# for i in s:
+#     if i.isdigit() == False:
+#          s = s.replace(i, '')
+# print(s)
+
+# print(*(input().isdigit() for i in range(1) if True))
+
+# s = input().split()
+# j = 0
+# for i in range(len(s)):
+#     j = int(s[i])
+#     if j % 2 == 0 and j ** 2 % 10 != 4:
+#         print(j ** 2, '', end='')
+
+
+# print(*(int(i) ** 2 for i in input().split() if int(i)%2 == 0 and int(i) ** 2 % 10 != 4))
+
+# a = [1, 7, -3, 9, 0, -67, 34, 12, 45, 1000, 6,  8, -2, 99]
+# n = len(a)
+#
+# for i in range(n - 1):
+#     for j in range(n - i - 1):
+#         if a[j] > a[j + 1]:                  # если порядок элементов пары неправильный
+#             a[j], a[j + 1] = a[j + 1], a[j]  # меняем элементы пары местами
+#
+# print('Отсортированный список:', a)
+
+
+# a = [17, 24, 91, 96, 67, -27, 79, -71, -71, 58, 48, 88, 88, -16, -78, 96,
+#      -76, 56, 92, 1, 32, -17, 36, 88, -61, -97, -37, -84, 50, 47, 94, -6,
+#      52, -76, 93, 14, -32, 98, -65, -16, -9, -68, -20, -40, -71, 93, -91,
+#      44, 25, 79, 97, 0, -94, 7, -47, -96, -55, -58, -78, -78, -79, 75, 44,
+#      -56, -41, 38, 16, 70, 17, -17, -24, -83, -74, -73, 11, -26, 63, -75,
+#      -19, -13, -51, -74, 21, -8, 21, -68, -66, -84, -95, 78, 69, -29, 39,
+#      38, -55, 7, -11, -26, -62, -84]
+#
+# n = len(a)
+#
+# for i in range(n - 1):
+#     for j in range(n - i - 1):
+#         if a[j] > a[j + 1]:
+#             a[j], a[j + 1] = a[j + 1], a[j]
+#
+# print(a)
+
+
+# a = [78, -32, 5, 39, 58, -5, -63, 57, 72, 9, 53, -1, 63, -97, -21, -94, -47, 57, -8, 60, -23, -72, -22, -79, 90, 96, -41, -71, -48, 84, 89, -96, 41, -16, 94, -60, -64, -39, 60, -14, -62, -19, -3, 32, 98, 14, 43, 3, -56, 71, -71, -67, 80, 27, 92, 92, -64, 0, -77, 2, -26, 41, 3, -31, 48, 39, 20, -30, 35, 32, -58, 2, 63, 64, 66, 62, 82, -62, 9, -52, 35, -61, 87, 78, 93, -42, 87, -72, -10, -36, 61, -16, 59, 59, 22, -24, -67, 76, -94, 59]
+# n = len(a)
+# t = 0
+# for i in range(n - 1):
+#     m = a[i]
+#     p = i
+#     for j in range(i + 1, n):
+#         if m > a[j]:
+#             m = a[j]
+#             p = j
+#     if p != a[i]:
+#         t = a[i]
+#         a[i] = a[p]
+#         a[p] = t
+#
+# print(a)
+# 1. ищу минимальное значение от первого элемента до n-го элемента
+# 2. добавляю его в конец списка методом append
+# 3. удаляю его первое вхождение методом remove
+# 4. n -= 1. Тогда в следующем цикле не буду проверять последний элемент, который туда положила
+# 5. Повторяю цикл
+# a = [5, 1, 4, 2, 8, 6, 10, 7]
+# sort_a = list()
+# n = len(a)
+# for i in range(n):
+#     m = min(a)
+#     sort_a.append(m)
+#     a.remove(m)
+# print(sort_a)
+
+
+# numbers = [1, 2, 3, 4, 5]
+# my_list = numbers[:-1]
+# print(my_list)
+
+# num = int(input())
+# n = list()
+# for i in range(2, num + 2, 2):
+#     n.append(i)
+# print(n)
+
+# num1 = input().split()
+# num2 = input().split()
+# num3 = list()
+# for i in range(len(num1)):
+#     num3.append(int(num1[i]) + int(num2[i]))
+# print(*num3)
+
+# num1 = input().split()
+# sm = 0
+# num2 = list()
+# for i in range(len(num1)):
+#     sm += int(num1[i])
+# print(*num1, sep='+', end=f"={sm}")
+
+# s_tel = input().split('-')
+# counter_1 = 0
+# counter_2 = 0
+# for i in range(len(s_tel)):
+#     if s_tel[i].isdigit():
+#         if len(s_tel) == 3:
+#             if s_tel[i].isdigit():
+#                 if len(s_tel[0]) == 3 and len(s_tel[1]) == 3 and len(s_tel[2]) == 4:
+#                     counter_1 += 1
+#         if len(s_tel) == 4:
+#             if s_tel[i].isdigit() and int(s_tel[0]) == 7:
+#                 if len(s_tel[0]) == 1 and len(s_tel[1]) == 3 and len(s_tel[2]) == 3 and len(s_tel[3]) == 4:
+#                     counter_2 += 1
+#     else:
+#         break
+# if counter_1 == 3 or counter_2 == 4:
+#     print("YES")
+# else:
+#     print("NO")
+
+# mx = max((len(i) for i in input().split()))
+# print(mx)
+
+# s = input().split()
+# new_s = list()
+# for i in range(len(s)):
+#     t = s[i][0]
+#     s[i] = s[i].replace(s[i][0:1], '', 1) + t + 'ки'
+# print(*s)
+
+# s = (i.replace(i[0], '', 1) + i[0] + 'ки' for i in input().split())
+# print(*s)
+
+# print(*(i.replace(i[0], '', 1) + i[0] + 'ки' for i in input().split()))
+
+
+# def drow_box():
+#     print('*' * 10)
+#     for i in range(12):
+#         print('*', ' ' * 6, '*')
+#     print('*' * 10)
+# drow_box()
+
+# def drow_box():
+#     for i in range(1, 11):
+#         print('*' * i)
+# drow_box()
+
+# def drow_box (hight, width):
+#     for i in range(hight):
+#         print('*' * width)
+# drow_box(5, 7)
+# drow_box(8, 12)
+
+
+# def print_triangl (base, fill):
+#     for i in range(1, ((fill + 2) // 2)):
+#         print(i * base)
+#     for i in range(0, ((fill + 2) // 2)):
+#         print((((fill + 2) // 2) - i) * base)
+#
+#
+# print_triangl(base = input(), fill = int(input()))
+
+# def print_fio (name, surname, patronymic):
+#     s = ''
+#     s += surname[0].capitalize()
+#     s += name[0].capitalize()
+#     s += patronymic[0].capitalize()
+#     print(s)
+#
+# name = input()
+# surname = input()
+# patronymic = input()
+#
+# print_fio(name, surname, patronymic)
+
+
+# def print_digit_sum(num):
+#     sm = 0
+#     while num > 0:
+#         sm += num % 10
+#         num //= 10
+#     print(sm)
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print_digit_sum(n)
+
+# # объявление функции
+# def convert_to_miles(km):
+#     return km * 0.6214
+#
+# # считываем данные
+# num = int(input())
+#
+# # вызываем функцию
+# print(convert_to_miles(num))
+
+
+# def days_in_month(mounth):
+#     if mounth == 1 or mounth == 3 or mounth == 5 or mounth == 7 or mounth == 8 or mounth == 10 or mounth == 12:
+#         return 31
+#     elif mounth == 2:
+#         return 28
+#     else:
+#         return 30
+#
+# m = int(input())
+#
+# print(days_in_month(m))
+
+# def get_all_dividers(x):
+#     x_l = list()
+#     for i in range(1, x + 1):
+#         if x % i == 0:
+#             x_l.append(i)
+#     return x_l
+#
+# def count_of_dividers(x_l):
+#     return len(x_l)
+#
+# x = int(input())
+#
+# # print(get_all_dividers(x))
+# print(count_of_dividers(get_all_dividers(x)))
+
+
+# def count_of_symbols(s, c):
+#     s_list = list()
+#     for i in range(len(s)):
+#         if s[i] == c:
+#             s_list.append(i)
+#     return s_list
+#
+# s = input()
+# c = input()
+# print(count_of_symbols(s, c))
+
+# def sort_list(l1 ,l2):
+#     for i in range(len(l1)):
+#         l1[i] = int(l1[i])
+#     for j in range(len(l2)):
+#         l2[j] = int(l2[j])
+#     l3 = l1 + l2
+#     l3.sort()
+#     print(l3)
+#
+# l1 = input().split()
+# l2 = input().split()
+#
+# sort_list(l1, l2)
+
+
+
+# def sort_lists(total_list):
+#     total_list.sort()
+#     return total_list
+#
+# num = int(input())
+# total_list = list()
+# s = ''
+# for i in range(num):
+#     s += input() + ' '
+# total_list = s.split()
+# total_list = list(map(int, total_list))
+# print(sort_lists(total_list))
+
+# # объявление функции
+# def is_valid_triangle(side1, side2, side3):
+#     if a >= b + c or b >= c + a or c >= a + b:
+#         return False
+#     else:
+#         return True
+#
+# # считываем данные
+# a, b, c = int(input()), int(input()), int(input())
+#
+# # вызываем функцию
+# print(is_valid_triangle(a, b, c))
+
+# def is_real(x):
+#     counter = 0
+#     for i in range(1, x + 1):
+#         if x % i == 0:
+#             counter += 1
+#     if counter == 2:
+#         return True
+#     else:
+#         return False
+#
+# def is_bigger_then_num(x):
+#     if is_real(x):
+#         x += 1
+#         while is_real(x) == False:
+#             x += 1
+#         return print(x)
+#     else:
+#         while is_real(x) == False:
+#             x += 1
+#         return print(x)
+#
+# n = int(input())
+# is_bigger_then_num(n)
+
+
+# def more_then_8(pas):
+#     if len(pas) > 7:
+#         return True
+#     else:
+#         return False
+#
+# def is_upper(pas):
+#     count = 0
+#     for i in range(len(pas)):
+#         if ord(pas[i]) in range(65, 91):
+#             count += 1
+#     if count > 0:
+#         return True
+#     else:
+#         return False
+#
+# def is_lower(pas):
+#     count = 0
+#     for i in range(len(pas)):
+#         if ord(pas[i]) in range(97, 123):
+#             count += 1
+#     if count > 0:
+#         return True
+#     else:
+#         return False
+#
+# def is_digit(pas):
+#     count = 0
+#     for i in range(len(pas)):
+#         if pas[i].isdigit():
+#             count += 1
+#     if count > 0:
+#         return True
+#     else:
+#         return False
+#
+# def checker(pas):
+#     counter = 0
+#     if more_then_8(pas):
+#         counter += 1
+#     if is_upper(pas):
+#         counter += 1
+#     if is_lower(pas):
+#         counter += 1
+#     if is_digit(pas):
+#         counter += 1
+#     if counter == 4:
+#         return True
+#     else:
+#         return False
+#
+# s = input()
+# print(checker(s))
+
+#######################################
+
+# def str_to_list(word):
+#     l = list()
+#     for i in word:
+#         l.append(i)
+#     return l
+#
+# def compare_words(word1, word2):
+#     counter = 0
+#     l1 = str_to_list(word1)
+#     l2 = str_to_list(word2)
+#     if len(l1) == len(l2):
+#         for i in range(len(l1)):
+#             if l1[i] == l2[i]:
+#                 counter += 1
+#     else:
+#         return False
+#     if counter == len(l1) - 1:
+#         return True
+#     else:
+#         return False
+#
+# s1, s2 = input(), input()
+# print(compare_words(s1, s2))
+
+
+# def str_to_list(s):
+#     l = list()
+#     for i in s:
+#         if i.isspace() or i == '.' or i == ',' or i == '-' or i == '!' or i == '?':
+#             continue
+#         else:
+#             l.append(i.lower())
+#     return l
+#
+# def compare_words(s):
+#     l = str_to_list(s)
+#     rev_l = list()
+#     for i in range(1, len(l) + 1):
+#         rev_l.append(l[len(l) - i])
+#     if l == rev_l:
+#         return True
+#     else:
+#         return False
+#
+# s = input()
+# print(compare_words(s))
+
+
+# def a_palindr(x):
+#     counter = 0
+#     for i in range(len(x)):
+#         if x[i] == x[len(x) - 1 - i]:
+#             counter += 1
+#     if len(x) == counter:
+#         return True
+#     else:
+#         return False
+#
+# def b_simpl(y):
+#     counter = 0
+#     for i in range(1, y + 1):
+#         if y % i == 0:
+#             counter += 1
+#     if counter == 2:
+#         return True
+#     else:
+#         return False
+#
+# def c_even(z):
+#     if z % 2 == 0:
+#         return True
+#     else:
+#         return False
+#
+# s = input().split(':')
+# x = s[0]
+# y = int(s[1])
+# z = int(s[2])
+# if len(s) == 3:
+#     if a_palindr(x) and b_simpl(y) and c_even(z):
+#         print(True)
+#     else:
+#         print(False)
+# else:
+#     print(False)
+
+############################
+
+# def is_correct_bracket(s):
+#     counter = 0
+#     for i in range(len(s)):
+#         if s[i] == '(':
+#             counter += 1
+#         if s[i] == ')':
+#             counter -= 1
+#         if counter < 0:
+#             return False
+#     if counter == 0:
+#         return True
+#     else:
+#         return False
+#
+# s = input()
+# if is_correct_bracket(s):
+#     print(True)
+# else:
+#     print(False)
+
+#############################
+# def convert_to_snake(s):
+#     n_s = s[0].lower()
+#     for i in range(1, len(s)):
+#         if s[i].isupper():
+#             n_s += '_' + s[i].lower()
+#         else:
+#             n_s += s[i]
+#     return n_s
+#
+#
+# s = input()
+# print(convert_to_snake(s))
+
+############################
+
+# def midl_line(x1, y1, x2, y2):
+#     a = (x1 + x2) / 2
+#     b = (y1 + y2) / 2
+#     return a, b
+#
+# a, b, c, d = int(input()), int(input()), int(input()), int(input())
+# print(*midl_line(a, b, c, d))
+
+#############################
+# import math
+# def get_circle(x):
+#     c = 2 * math.pi * x
+#     s = math.pi * x ** 2
+#     return c, s
+#
+# x = float(input())
+# print(*get_circle(x))
+
+############################
+# import math
+# def solve(a, b, c):
+#     d = b**2 - (4 * a * c)
+#     if d > 0:
+#         x1 = (-b - math.sqrt(d)) / (2 * a)
+#         x2 = (-b + math.sqrt(d)) / (2 * a)
+#         if x1 > x2:
+#             return x2, x1
+#         else:
+#             return x1, x2
+#     if d == 0:
+#         x1 = -b / (2 * a)
+#         x2 = -b / (2 * a)
+#         if x1 > x2:
+#             return x2, x1
+#         else:
+#             return x1, x2
+#     if d < 0:
+#         return False
+#
+# a, b, c = float(input()), float(input()), float(input())
+# print(*solve(a, b, c))
+
+#####################################
+
+# def print_tree():
+#     n = 8
+#     j = 6
+#     for i in range(1, n):
+#         print(' ' * j, '*' * i + '*' * (i - 1))
+#         j -= 1
+#     print('*' * 15)
+# print_tree()
+
+###################################
+#
+# def get_shipping_cost(x):
+#     first_cost = 1000
+#     another_cost = 120
+#     if x == 1:
+#         total_cost = first_cost
+#     else:
+#         x -= 1
+#         total_cost = first_cost + (another_cost * (x))
+#     return total_cost
+#
+# x = int(input())
+# print(get_shipping_cost(x))
+
+################################
+
+# import math
+#
+# def compute_binom(n, k):
+#     b = math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
+#     return int(b)
+# x, y = int(input()), int(input())
+# print(compute_binom(x, y))
+
+##############################
+
+# def number_to_word(x):
+#     f_d = x // 10
+#     s_d = x // 100
+#     zero_to_ninety_nine = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять',
+#                            'десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать',
+#                            'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать', 'двадцать', 'двадцать один',
+#                            'двадцать два', 'двадцать три', 'двадцать четыре', 'двадцать пять', 'двадцать шесть',
+#                            'двадцать семь', 'двадцать восемь', 'двадцать девять', 'тридцать', 'тридцать один',
+#                            'тридцать два', 'тридцать три', 'тридцать четыре', 'тридцать пять', 'тридцать шесть',
+#                            'тридцать семь', 'тридцать восемь', 'тридцать девять', 'сорок', 'сорок один', 'сорок два',
+#                            'сорок три', 'сорок четыре', 'сорок пять', 'сорок шесть', 'сорок семь', 'сорок восемь',
+#                            'сорок девять', 'пятьдесят', 'пятьдесят один', 'пятьдесят два', 'пятьдесят три',
+#                            'пятьдесят четыре', 'пятьдесят пять', 'пятьдесят шесть', 'пятьдесят семь',
+#                            'пятьдесят восемь', 'пятьдесят девять', 'шестьдесят', 'шестьдесят один', 'шестьдесят два',
+#                            'шестьдесят три', 'шестьдесят четыре', 'шестьдесят пять', 'шестьдесят шесть',
+#                            'шестьдесят семь', 'шестьдесят восемь', 'шестьдесят девять', 'семьдесят', 'семьдесят один',
+#                            'семьдесят два', 'семьдесят три', 'семьдесят четыре', 'семьдесят пять', 'семьдесят шесть',
+#                            'семьдесят семь', 'семьдесят восемь', 'семьдесят девять', 'восемьдесят', 'восемьдесят один',
+#                            'восемьдесят два', 'восемьдесят три', 'восемьдесят четыре', 'восемьдесят пять',
+#                            'восемьдесят шесть', 'восемьдесят семь', 'восемьдесят восемь', 'восемьдесят девять',
+#                            'девяносто', 'девяносто один', 'девяносто два', 'девяносто три', 'девяносто четыре',
+#                            'девяносто пять', 'девяносто шесть', 'девяносто семь', 'девяносто восемь',
+#                            'девяносто девять']
+#
+#     if 0 < x < 10:
+#         return zero_to_ninety_nine[x]
+#     else:
+#         return zero_to_ninety_nine[x]
+#
+# num = int(input())
+# print(number_to_word(num))
+##################################################
+# def get_month(s, x):
+#     lng_ru = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+#     lng_en = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+#
+#     if s == 'ru':
+#         return lng_ru[x -1]
+#     if s == 'en':
+#         return lng_en[x - 1]
+# lang = input()
+# n = int(input())
+# print(get_month(lang, n))
+
+###########################################
+
+# def is_magic(s):
+#     date = list()
+#     date = s.split('.')
+#     if int(date[0]) * int(date[1]) == int(date[2]) % 100:
+#         return True
+#     else:
+#         return False
+#
+# date = input()
+# if is_magic(date):
+#     print(True)
+# else:
+#     print(False)
+
+# def to_list(s):
+#     ready_s = list()
+#     for i in range(len(s)):
+#         if s[i].isspace():
+#             continue
+#         elif s[i] in ready_s:
+#             continue
+#         else:
+#             ready_s += s[i].lower()
+#     return ready_s
+#
+# def count_letters(ready_s):
+#     count = 0
+#     new_s = to_list(s)
+#     new_s.sort()
+#     for i in range(len(new_s)):
+#         if ord(new_s[i]) in range(97, 123):
+#             count += 1
+#     if count == 26:
+#         return True
+#     else:
+#         return False
+#
+# s = input()
+# print(count_letters(s))
