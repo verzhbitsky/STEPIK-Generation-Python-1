@@ -1439,7 +1439,6 @@
 # sort_list(l1, l2)
 
 
-
 # def sort_lists(total_list):
 #     total_list.sort()
 #     return total_list
@@ -1836,3 +1835,115 @@
 #
 # s = input()
 # print(count_letters(s))
+
+# import random
+#
+# num = random.randrange(15, 50, 5)
+# print(num)
+
+
+# import random
+#
+# numbers = list(range(2, 10, 2)) + [3]
+#
+# num = random.choice(numbers)
+# print(num)
+
+# import math
+# num = int(input())
+# print(math.ceil(math.log2(num)))
+
+# from random import *
+
+# rand_num = randrange(100)
+# print('Добро пожаловать в числовую угадайку')
+#
+#
+# def is_valid(num):
+#     if num.isdigit():
+#         if 0 < int(num) < 100:
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
+#
+# # print(rand_num)
+# count = 0
+# while True:
+#     num = input('Введите число: ')
+#     if is_valid(num):
+#         num = int(num)
+#         if num < rand_num:
+#             print('Ваше число меньше загаданного, попробуйте еще разок')
+#         if num > rand_num:
+#             print('Ваше число больше загаданного, попробуйте еще разок')
+#         if num == rand_num:
+#             print('Вы угадали, поздравляем!')
+#             print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
+#             break
+#         count += 1
+#     else:
+#         print('А может быть все-таки введем целое число от 1 до 100?')
+#
+# print('Число попыток:', count)
+
+
+# s = 'Блажен, кто верует, тепло ему на свете'
+# new_s = ''
+# for i in range(len(s)):
+#     new_s += chr(ord(s[i]) + 10)
+# print(new_s)
+
+# def len_str(f):
+#     new_s = ''
+#     l_s = list()
+#     l_c_count = list()
+#     for i in range(len(f)):
+#         if f[i].isalpha():
+#             new_s += f[i]
+#         if f[i].isspace():
+#             new_s += f[i]
+#     l_s = new_s.split()
+#     for i in range(len(l_s)):
+#         l_c_count.append(len(l_s[i]))
+#     return l_c_count
+
+
+# en = [chr(x) for x in range(ord('a'), ord('z') + 1)]
+# res = ''
+# t = input().split()
+#
+# for p in t:
+#     s = len(''.join(filter(str.isalpha, p)))
+#     for e in p:
+#         if e.isupper():
+#             res += en[(s + en.index(e.lower())) % 26].upper()
+#         elif e.islower():
+#             res += en[(s + en.index(e)) % 26]
+#         else:
+#             res += e
+#     res += ' '
+# print(res)
+
+
+# s = '111111'
+# sm = 0
+# for i in range(len(s)):
+#     # if i == 0:
+#     #     continue
+#     sm += int(s[i]) * (2 ** (len(s) - i))
+# print(int(sm / 2))
+
+# print(hex(int('1000', 2)))
+
+# print(bin(513))
+
+# x = int(input())
+# bin_n = bin(x)
+# oct_n = oct(x)
+# hex_n = hex(x)
+#
+# print(bin_n[2:].upper())
+# print(oct_n[2:].upper())
+# print(hex_n[2:].upper())
